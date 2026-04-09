@@ -1,0 +1,146 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg-primary:    #0a0a0a;
+    --bg-card:       #111111;
+    --accent-gold:   #f59e0b;
+    --accent-amber:  #d97706;
+    --accent-orange: #f97316;
+    --text-primary:  #fafaf9;
+    --text-muted:    #a3a3a3;
+    --text-subtle:   #525252;
+  }
+
+  * { box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background-color: #0a0a0a;
+    color: #fafaf9;
+    overflow-x: hidden;
+    line-height: 1.7;
+    font-feature-settings: 'kern' 1, 'liga' 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5 {
+    line-height: 1.15;
+    letter-spacing: -0.03em;
+  }
+
+  /* Scrollbar */
+  ::-webkit-scrollbar       { width: 4px; }
+  ::-webkit-scrollbar-track { background: #0a0a0a; }
+  ::-webkit-scrollbar-thumb { background: #f59e0b; border-radius: 10px; }
+  ::-webkit-scrollbar-thumb:hover { background: #fbbf24; }
+
+  /* Selection */
+  ::selection {
+    background: rgba(245, 158, 11, 0.3);
+    color: #fafaf9;
+  }
+
+  /* Reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@layer utilities {
+  /* Animated grid — warm gold tint */
+  .hero-grid {
+    background-image:
+      linear-gradient(rgba(245, 158, 11, 0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(245, 158, 11, 0.05) 1px, transparent 1px);
+    background-size: 60px 60px;
+    animation: gridMove 25s linear infinite;
+  }
+
+  /* Gradient text — gold */
+  .text-gradient {
+    background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Gradient text — warm white to gold */
+  .text-gradient-white {
+    background: linear-gradient(135deg, #fafaf9 0%, #fde68a 55%, #f59e0b 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Glow utilities */
+  .glow-gold {
+    box-shadow: 0 0 30px rgba(245, 158, 11, 0.25), 0 0 60px rgba(245, 158, 11, 0.1);
+  }
+
+  /* Section line — full-width gold rule that draws in */
+  .section-line {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(245,158,11,0.4), transparent);
+    transform-origin: left;
+  }
+
+  /* Scramble characters styling */
+  .scramble-char {
+    display: inline-block;
+    color: #f59e0b;
+  }
+
+  /* Glitch hover — applied via JS className toggle */
+  .glitch-active {
+    animation: glitch 0.35s steps(4) forwards;
+  }
+
+  /* Floating badge */
+  .tech-badge {
+    padding: 0.4rem 0.85rem;
+    border-radius: 9999px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    border: 1px solid rgba(245, 158, 11, 0.18);
+    background: rgba(245, 158, 11, 0.05);
+    color: rgba(245, 158, 11, 0.5);
+    backdrop-filter: blur(8px);
+    white-space: nowrap;
+  }
+}
+
+/* ── Keyframes ──────────────────────────────────────────────────────────── */
+
+@keyframes gridMove {
+  0%   { background-position: 0 0; }
+  100% { background-position: 60px 60px; }
+}
+
+@keyframes glitch {
+  0%   { text-shadow: none;                             transform: translate(0,0); }
+  20%  { text-shadow: -2px 0 #f59e0b, 2px 0 #ef4444;   transform: translate(-1px,0); }
+  40%  { text-shadow:  2px 0 #ef4444, -2px 0 #fbbf24;  transform: translate(1px,0); }
+  60%  { text-shadow: none;                             transform: translate(0,0); }
+  80%  { text-shadow:  1px 0 #f59e0b, -1px 0 #ef4444;  transform: translate(0,0); }
+  100% { text-shadow: none;                             transform: translate(0,0); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-14px); }
+}
+
+@keyframes shimmer {
+  0%   { background-position: -200% center; }
+  100% { background-position:  200% center; }
+}
