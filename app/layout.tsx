@@ -14,32 +14,39 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: 'Kareem Alwan | Frontend Developer',
+  title: 'Kareem Alwan | Full-Stack Developer · AI-native Web Apps',
   description:
-    'Frontend Developer at FES Institute building production-ready web applications with React, Next.js, TypeScript, and Node.js.',
+    'Full-stack developer shipping AI-native products. Currently freelancing on Shopify performance for an e-commerce client. 8+ deployed production applications with React, Next.js, TypeScript, and the Anthropic API.',
   keywords: [
     'Kareem Alwan',
+    'Full-Stack Developer',
     'Frontend Developer',
+    'AI Engineer',
     'React',
     'Next.js',
     'TypeScript',
     'Node.js',
+    'Anthropic API',
+    'ElevenLabs',
+    'Shopify',
+    'Freelance',
     'FES Institute',
     'Westland MI',
+    'Detroit',
   ],
   authors: [{ name: 'Kareem Alwan', url: 'https://github.com/KareemAl1' }],
   openGraph: {
-    title: 'Kareem Alwan | Frontend Developer',
+    title: 'Kareem Alwan | Full-Stack Developer · AI-native Web Apps',
     description:
-      'Frontend Developer building production-ready apps with React, Next.js, TypeScript, and Node.js.',
+      'Full-stack developer shipping AI-native products. Currently delivering live freelance work on Shopify performance for an e-commerce client.',
     type: 'website',
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Kareem Alwan | Frontend Developer',
+    title: 'Kareem Alwan | Full-Stack Developer · AI-native Web Apps',
     description:
-      'Frontend Developer building production-ready apps with React, Next.js, TypeScript, and Node.js.',
+      'Full-stack developer shipping AI-native products. Currently delivering live freelance work on Shopify performance for an e-commerce client.',
   },
   robots: { index: true, follow: true },
 }
