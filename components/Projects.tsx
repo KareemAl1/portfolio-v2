@@ -15,20 +15,28 @@ interface Project {
 
 const PROJECTS: Project[] = [
   {
+    name: 'FinTrack',
+    description: 'Personal finance dashboard with Recharts data viz, streaming AI monthly summaries, JWT auth, and one-click demo mode.',
+    tech: ['Next.js 14', 'TypeScript', 'Supabase', 'Recharts', 'Anthropic API'],
+    live: 'https://fintrack-six-livid.vercel.app',
+    github: 'https://github.com/KareemAl1/fintrack',
+    accent: '#fbbf24',
+  },
+  {
+    name: 'VoiceNote',
+    description: 'AI voice memo app with ElevenLabs Speech-to-Text and Anthropic streaming for real-time summary and key-point extraction.',
+    tech: ['Next.js', 'TypeScript', 'ElevenLabs API', 'Anthropic API'],
+    live: 'https://voicenote-phi.vercel.app',
+    github: 'https://github.com/KareemAl1/voicenote',
+    accent: '#f97316',
+  },
+  {
     name: 'CoachDash',
     description: 'Full-stack AI developer activity tracker — Node.js/Express REST API, PostgreSQL database, JWT auth, Chart.js dashboards, and Anthropic API streaming for AI coaching summaries.',
     tech: ['Next.js', 'Node.js', 'PostgreSQL', 'Anthropic API', 'JWT', 'Chart.js'],
     live: 'https://coachdash.vercel.app',
     github: 'https://github.com/KareemAl1/coachdash',
     accent: '#f59e0b',
-  },
-  {
-    name: 'VoiceNote',
-    description: 'AI voice memo summarizer — record audio, transcribe with ElevenLabs, and receive structured AI summaries powered by Anthropic instantly.',
-    tech: ['Next.js', 'ElevenLabs API', 'Anthropic API'],
-    live: 'https://voicenote-phi.vercel.app',
-    github: 'https://github.com/KareemAl1/voicenote',
-    accent: '#f97316',
   },
   {
     name: 'FeatureFlow',
@@ -184,7 +192,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
             className="text-xs font-mono font-bold px-2 py-0.5 rounded-md shrink-0"
             style={{ color: project.accent, background: `rgba(${accentRgb},0.12)` }}
           >
-            0{index + 1}
+            {String(index + 1).padStart(2, '0')}
           </span>
         </div>
 
@@ -288,7 +296,7 @@ function SectionHeader() {
         viewport={{ once: true }}
         transition={{ duration: 0.7, delay: 0.3 }}
       >
-        AI dashboards, real-time data pipelines, and full-stack architecture.
+        AI-native apps, real-time data pipelines, and full-stack architecture.
       </motion.p>
     </div>
   )

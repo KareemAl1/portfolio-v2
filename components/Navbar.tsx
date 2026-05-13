@@ -4,10 +4,11 @@ import { useEffect, useState, useRef, useCallback } from 'react'
 import { motion, AnimatePresence, useMotionValue, useSpring } from 'framer-motion'
 
 const NAV_LINKS = [
-  { label: 'About',    href: '#about' },
-  { label: 'Projects', href: '#projects' },
-  { label: 'Skills',   href: '#skills' },
-  { label: 'Contact',  href: '#contact' },
+  { label: 'About',      href: '#about' },
+  { label: 'Case Study', href: '#case-study' },
+  { label: 'Projects',   href: '#projects' },
+  { label: 'Skills',     href: '#skills' },
+  { label: 'Contact',    href: '#contact' },
 ]
 
 // ─── Magnetic nav link ───────────────────────────────────────────────────────

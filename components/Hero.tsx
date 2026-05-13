@@ -8,7 +8,7 @@ import dynamic from 'next/dynamic'
 const ParticleSphere = dynamic(() => import('./ParticleSphere'), { ssr: false })
 
 // ─── Typewriter Hook ─────────────────────────────────────────────────────────
-const ROLES = ['Frontend Developer', 'React Engineer', 'Next.js Developer', 'UI/UX Focused']
+const ROLES = ['Full-Stack Developer', 'AI Engineer', 'Next.js Developer', 'Freelance Developer']
 
 function useTypewriter(words: string[], typingSpeed = 75, deletingSpeed = 40, pauseMs = 2400) {
   const [text, setText]       = useState('')
@@ -161,8 +161,8 @@ function ParticleField() {
 const TECH_BADGES = [
   { label: 'React',       left: '2%',  top: '22%', dur: 5.5, delay: 0.6 },
   { label: 'TypeScript',  left: '2%',  top: '68%', dur: 7.0, delay: 0.3 },
-  { label: 'Node.js',     left: '88%', top: '72%', dur: 5.8, delay: 0.9 },
-  { label: 'PostgreSQL',  left: '44%', top: '90%', dur: 6.5, delay: 1.4 },
+  { label: 'Anthropic',   left: '88%', top: '72%', dur: 5.8, delay: 0.9 },
+  { label: 'Shopify',     left: '44%', top: '90%', dur: 6.5, delay: 1.4 },
   { label: 'Next.js',     left: '88%', top: '16%', dur: 6.2, delay: 1.1 },
 ]
 
@@ -353,8 +353,8 @@ export default function Hero() {
               className="text-base sm:text-lg max-w-xl mx-auto md:mx-0 mb-12 leading-relaxed"
               style={{ color: '#525252' }}
             >
-              Building production-ready apps with React, Next.js, TypeScript, and Node.js —
-              from database design to deployed UI.
+              Full-stack developer shipping AI-native products. Currently delivering
+              live freelance work for an e-commerce client.
             </motion.p>
 
             {/* CTAs */}

@@ -59,9 +59,9 @@ function StatCard({ value, suffix, label, delay, inView }: {
 // ─── Skill Tag ────────────────────────────────────────────────────────────────
 const SKILLS = [
   'Next.js', 'React', 'TypeScript', 'JavaScript',
-  'Node.js', 'Express', 'PostgreSQL', 'Firebase',
-  'Redux', 'Tailwind CSS', 'Git', 'Vercel',
-  'Railway', 'Figma', 'REST APIs', 'JWT Auth',
+  'Node.js', 'Express', 'PostgreSQL', 'MySQL',
+  'Anthropic API', 'ElevenLabs', 'Supabase', 'Firebase',
+  'Shopify / Liquid', 'Tailwind CSS', 'Vercel', 'JWT Auth',
 ]
 
 function SkillTag({ skill, delay }: { skill: string; delay: number }) {
@@ -158,20 +158,24 @@ export default function About() {
               viewport={{ once: true }}
               transition={{ duration: 0.85, type: 'spring', stiffness: 100, damping: 20 }}
             >
-              I'm a Frontend Developer building polished, production-ready web apps with{' '}
-              <span className="font-semibold" style={{ color: '#f59e0b' }}>Next.js, React, TypeScript, and Node.js</span>
-              {' '}— from database design to deployed UI. I completed the{' '}
-              <span className="font-semibold" style={{ color: '#f59e0b' }}>FES Institute Frontend Development Program</span>
-              {' '}and have shipped multiple live projects including an AI-powered coaching
-              dashboard, a voice memo app with real-time transcription, a real-time analytics
-              platform, and a feature flag dashboard with WebSocket architecture. Currently
-              seeking junior-to-mid frontend or full-stack roles.
+              I'm a full-stack developer shipping AI-native production work. I'm currently
+              freelancing for{' '}
+              <span className="font-semibold" style={{ color: '#f59e0b' }}>Adonis Botanicals</span>
+              {' '}on Shopify performance — the kind of engagement where Mobile PageSpeed went from
+              44 to 86, and a broken Meta Pixel got restored so paid attribution actually worked
+              again. Outside of client work, I&rsquo;ve deployed{' '}
+              <span className="font-semibold" style={{ color: '#f59e0b' }}>8+ production applications</span>
+              {' '}with a focus on AI integration — Anthropic API streaming, ElevenLabs
+              speech-to-text, prompt design, and live data pipelines. Certified by{' '}
+              <span className="font-semibold" style={{ color: '#f59e0b' }}>FES Institute</span>{' '}and
+              currently completing Full Stack Fundamentals (Node, Express, PostgreSQL, MySQL).
+              Based in Westland, MI — open to remote US or Detroit-area roles.
             </motion.p>
 
             {/* Stats */}
             <div ref={statsRef} className="grid grid-cols-2 gap-4">
-              <StatCard value={10} suffix="+" label="Technologies"         delay={0}   inView={statsInView} />
-              <StatCard value={3}  suffix="+"  label="AI-powered projects"  delay={0.1} inView={statsInView} />
+              <StatCard value={8} suffix="+" label="Deployed production apps" delay={0}   inView={statsInView} />
+              <StatCard value={3} suffix="+" label="AI-powered projects"     delay={0.1} inView={statsInView} />
             </div>
 
             {/* FES badge */}
@@ -184,7 +188,7 @@ export default function About() {
               transition={{ delay: 0.45 }}
             >
               <span>◆</span>
-              FES Institute — Frontend Development Program
+              FES Institute Certified · Full Stack Fundamentals (in progress)
             </motion.div>
 
             {/* GitHub CTA */}
@@ -236,11 +240,11 @@ export default function About() {
               transition={{ duration: 0.8, delay: 0.3, type: 'spring', stiffness: 100, damping: 20 }}
             >
               <p className="text-xs font-mono tracking-widest uppercase mb-2" style={{ color: '#f59e0b' }}>
-                In Development
+                Currently Building
               </p>
               <p className="text-sm leading-relaxed" style={{ color: '#525252' }}>
-                Angular, AWS, Jest & React Testing Library, CI/CD pipelines — expanding into
-                enterprise-grade tooling and test-driven development.
+                Shopify performance and Meta Pixel attribution work for an e-commerce client,
+                plus deepening backend coverage with Node, Express, PostgreSQL, and MySQL.
               </p>
             </motion.div>
           </div>
